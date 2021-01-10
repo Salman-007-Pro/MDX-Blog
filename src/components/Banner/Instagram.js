@@ -6,7 +6,12 @@ import { graphql, useStaticQuery } from 'gatsby'
 //...GatsbyImageSharpFluid
 
 const Instagram = () => {
-  return <Wrapper>Banner Instagram</Wrapper>
+  return (
+    <Wrapper>
+      <Title title="instagram" />
+      <div className="images">Error</div>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.article`

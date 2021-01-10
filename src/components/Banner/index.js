@@ -5,7 +5,14 @@ import Instagram from './Instagram'
 import Recent from './Recent'
 import BannerCategories from './BannerCategories'
 const Banner = () => {
-  return <Wrapper>Banner Component</Wrapper>
+  return (
+    <Wrapper>
+      <About />
+      <Instagram />
+      <Recent />
+      <BannerCategories />
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.aside`

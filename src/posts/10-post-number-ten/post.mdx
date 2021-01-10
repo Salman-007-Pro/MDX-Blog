@@ -1,0 +1,81 @@
+---
+title: Gatsby tutorial
+slug: gatsby-tutorial
+image: ./images/gatsby-1.png
+date: 2020-05-27
+author: Muhammad Salman Asif
+category: gatsby
+readTime: 20
+---
+
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton } from '../../components/Complete'
+
+## my first mdx file
+
+**I'm baby tacos etsy squid whatever you probably haven't heard of them, church-key lomo authentic enamel pin.** Poke yuccie woke shabby chic blog, lyft sriracha intelligentsia try-hard raclette microdosing yr. Actually narwhal activated charcoal mumblecore vice single-origin coffee lyft lumbersexual wayfarers hexagon unicorn. Freegan etsy lo-fi af 8-bit chartreuse everyday carry, synth squid cronut church-key. Live-edge poke marfa kinfolk 8-bit. Selvage viral af pok pok occupy. Cray kitsch meggings tattooed PBR&B pinterest tofu mumblecore air plant gluten-free leggings.
+
+# my heading h1
+
+###### my heading 6
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastName = 'smith'
+```
+
+</div>
+
+<div className="nice-text">
+  <h3>nice text</h3>
+  <FiInfo className="nice-text-icon" />
+  Occupy cray lomo, plaid austin kinfolk lumbersexual cred bitters kombucha kale
+  chips blog ennui stumptown locavore. Mixtape you probably haven't heard of
+  them pop-up vice sustainable quinoa. Freegan kickstarter photo booth pok pok.
+  Poke migas coloring book, salvia lomo street art synth selfies schlitz craft
+  beer YOLO copper mug shabby chic kitsch. Gochujang cronut keffiyeh post-ironic
+  kickstarter before they sold out cray lumbersexual YOLO PBR&B pug 8-bit.
+  Hexagon kinfolk 90's pinterest stumptown lo-fi, venmo twee kale chips YOLO
+  gluten-free pour-over. Put a bird on it twee 8-bit forage chicharrones XOXO
+  master cleanse, truffaut 3 wolf moon taiyaki distillery PBR&B single-origin
+  coffee kinfolk pinterest.
+</div>
+
+<h2>React component</h2>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+![nice image](./images/gatsby-1.png)
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>

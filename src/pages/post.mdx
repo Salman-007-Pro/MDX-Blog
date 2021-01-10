@@ -1,0 +1,170 @@
+import { Link } from 'gatsby'
+import { FiInfo } from 'react-icons/fi'
+import { Counter, LikeButton, RegVideo, Video } from '../components/Complete'
+
+<section className="mdx-page">
+
+## my first mdx file
+
+**I'm baby tacos etsy squid whatever you probably haven't heard of them, church-key lomo authentic enamel pin.** Poke yuccie woke shabby chic blog, lyft sriracha intelligentsia try-hard raclette microdosing yr. Actually narwhal activated charcoal mumblecore vice single-origin coffee lyft lumbersexual wayfarers hexagon unicorn. Freegan etsy lo-fi af 8-bit chartreuse everyday carry, synth squid cronut church-key. Live-edge poke marfa kinfolk 8-bit. Selvage viral af pok pok occupy. Cray kitsch meggings tattooed PBR&B pinterest tofu mumblecore air plant gluten-free leggings.
+
+# my heading h1
+
+###### my heading 6
+
+<div className="code">
+
+```js
+const firstName = 'john'
+const lastName = 'smith'
+```
+
+</div>
+
+<div className="nice-text">
+  <h3>nice text</h3>
+  <FiInfo className="nice-text-icon" />
+  Occupy cray lomo, plaid austin kinfolk lumbersexual cred bitters kombucha kale
+  chips blog ennui stumptown locavore. Mixtape you probably haven't heard of
+  them pop-up vice sustainable quinoa. Freegan kickstarter photo booth pok pok.
+  Poke migas coloring book, salvia lomo street art synth selfies schlitz craft
+  beer YOLO copper mug shabby chic kitsch. Gochujang cronut keffiyeh post-ironic
+  kickstarter before they sold out cray lumbersexual YOLO PBR&B pug 8-bit.
+  Hexagon kinfolk 90's pinterest stumptown lo-fi, venmo twee kale chips YOLO
+  gluten-free pour-over. Put a bird on it twee 8-bit forage chicharrones XOXO
+  master cleanse, truffaut 3 wolf moon taiyaki distillery PBR&B single-origin
+  coffee kinfolk pinterest.
+</div>
+
+<h2>React component</h2>
+
+<Counter />
+
+```jsx
+import React from 'react'
+import styled from 'styled-components'
+import { AiOutlineLike } from 'react-icons/ai'
+const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+    <Wrapper>
+      <div>
+        <button onClick={() => setValue(value + 1)}>
+          <AiOutlineLike />
+        </button>
+        <p>
+          Liked the post?
+          <br />
+          Click thumbs up few times
+        </p>
+      </div>
+      <span>+{value}</span>
+    </Wrapper>
+  )
+}
+```
+
+<LikeButton />
+
+<h2>Video components</h2>
+<RegVideo />
+<Video />
+<h2>regular heading</h2>
+<h2 title>title heading</h2>
+<h4>inline code</h4>
+
+`console.log('hello code')`
+
+<h4>Blockquote element</h4>
+
+<blockquote display="default">
+  'm baby stumptown intelligentsia plaid direct trade fixie hella narwhal.
+  Shaman lyft williamsburg single-origin coffee vexillologist letterpress
+  crucifix. Yuccie pinterest cardigan, squid gentrify brunch humblebrag freegan
+  la croix microdosing edison bulb iPhone DIY man braid tacos. Kombucha iceland
+  raw denim cold-pressed
+</blockquote>
+<blockquote display="warning">
+  'm baby stumptown intelligentsia plaid direct trade fixie hella narwhal.
+  Shaman lyft williamsburg single-origin coffee vexillologist letterpress
+  crucifix. Yuccie pinterest cardigan, squid gentrify brunch humblebrag freegan
+  la croix microdosing edison bulb iPhone DIY man braid tacos. Kombucha iceland
+  raw denim cold-pressed
+</blockquote>
+<blockquote display="info">
+  'm baby stumptown intelligentsia plaid direct trade fixie hella narwhal.
+  Shaman lyft williamsburg single-origin coffee vexillologist letterpress
+  crucifix. Yuccie pinterest cardigan, squid gentrify brunch humblebrag freegan
+  la croix microdosing edison bulb iPhone DIY man braid tacos. Kombucha iceland
+  raw denim cold-pressed
+</blockquote>
+<blockquote>
+  'm baby stumptown intelligentsia plaid direct trade fixie hella narwhal.
+  Shaman lyft williamsburg single-origin coffee vexillologist letterpress
+  crucifix. Yuccie pinterest cardigan, squid gentrify brunch humblebrag freegan
+  la croix microdosing edison bulb iPhone DIY man braid tacos. Kombucha iceland
+  raw denim cold-pressed
+</blockquote>
+
+#### Javascript
+
+```js
+// comments
+const name = 'john'
+const channel = 'coding addict'
+
+function featuredProducts(data) {
+  return data.filter(item => {
+    return item.featured === true
+  })
+}
+featuredProducts()
+```
+
+#### JSX
+
+```jsx
+import React from 'react'
+
+const Counter = () => {
+  const [count, setCount] = React.useState(0)
+  return (
+    <section className="counter">
+      <h4>show some love to MDX</h4>
+      <h4>likes {count}</h4>
+      <button className="btn btn-danger" onClick={() => setCount(count + 1)}>
+        i like mdx
+      </button>
+    </section>
+  )
+}
+export default Counter
+```
+
+#### HTML
+
+```html
+<h1>hello world</h1>
+<p class="random">random text</p>
+<section class="contact">
+  <div class="title">
+    <h1>contact us</h1>
+  </div>
+</section>
+```
+
+#### CSS
+
+```css
+max-width: 500px;
+border-radius: var(--radius);
+padding: 1rem 1.5rem;
+background: var(--clr-grey-10);
+text-align: center;
+```
+
+<Link to="/posts" className="btn center-btn">
+  all posts
+</Link>
+
+</section>

@@ -18,7 +18,6 @@ const Hero = ({ showPerson }) => {
     person: { childrenImageSharp },
   } = useStaticQuery(query)
   const fluid = childrenImageSharp[0].fluid
-  console.log(fluid)
   return (
     <header className="hero">
       {showPerson && (
